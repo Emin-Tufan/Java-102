@@ -27,9 +27,13 @@ public class Collect {
         Iterator<Book> itr = books.iterator();
 
         //Itaretor ile nesnedeki verilerin kitap adina ulaşıldı
+        System.out.println("####################################################");
+        System.out.println("Kita ismine gore Alfabetik olarak siralama");
+        System.out.println("####################################################");
         while (itr.hasNext()) {
             System.out.println("Kitabin adi : " + itr.next().getBookName());
         }
+        System.out.println("####################################################");
         //Anonim method ile nesneye ait bir Comprator oluşturuldu
         TreeSet<Book> books2 = new TreeSet<>(new Comparator<Book>() {
             @Override
@@ -43,9 +47,12 @@ public class Collect {
         Iterator<Book> bookIterator = books2.iterator();
         //Itaretor ile kitap adi donuldu
 
+        System.out.println("Kitap sayfa sayisina gore Buyukten kucuge siralama ");
+        System.out.println("####################################################");
         while (bookIterator.hasNext()) {
             System.out.println("Kitabin adi : " + bookIterator.next().getBookName());
         }
+        System.out.println("####################################################");
 
 
     }
